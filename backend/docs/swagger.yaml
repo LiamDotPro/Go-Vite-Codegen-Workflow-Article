@@ -1,0 +1,32 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a sample server for a dummy endpoint.
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /dummy/:id:
+    get:
+      consumes:
+      - application/json
+      description: Fetch data from dummy endpoint
+      operationId: dummy-endpoint
+      parameters:
+      - description: Some ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Dummy endpoint
+      tags:
+      - Dummy
+swagger: "2.0"

@@ -1,0 +1,47 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample server for a dummy endpoint.",
+        "title": "Swagger Example API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/dummy/:id": {
+            "get": {
+                "description": "Fetch data from dummy endpoint",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dummy"
+                ],
+                "summary": "Dummy endpoint",
+                "operationId": "dummy-endpoint",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Some ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
